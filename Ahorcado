@@ -1,0 +1,21 @@
+def ahorcado():
+    palabrasecreta = "azul".lower()
+    letras = len(palabrasecreta)
+    fallos = 0
+    aciertos = 0
+    print("La palabra tiene " + str(letras) + " letras")
+    while fallos < 5 and aciertos < letras :
+        letra = input("Introduce una letra: ").lower()
+        if letra in palabrasecreta:
+            print("Correcto, la palabra secreta contiene la letra " + letra + " !")
+            aciertos += 1
+        else:
+            print ("Ni de coña, la palabra secreta no contiene la letra " + letra + " pero ni de cerca !")
+            fallos += 1
+    if fallos == 5:
+        print("Esta vez no lo has conseguido adivinar. Jugad otra vez y a ver si esta vez lo adivinas. La palabra secreta era " + palabrasecreta)
+    elif aciertos == letras:
+        print("¡Olé, lo has conseguido, la palabra secreta era " + palabrasecreta + " !")
+    else:
+        print(" ")
+ahorcado()
